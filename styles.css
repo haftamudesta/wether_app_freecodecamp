@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(145deg, #1b3358 0%, #0e1a2b 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    padding: 1rem;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2.5rem;
+    padding: 2.5rem 2rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+    color: #f0f6fc;
+    transition: all 0.2s ease;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title-icon {
+    font-size: 2rem;
+}
+
+.badge {
+    background: #3f5e8c;
+    padding: 0.2rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 40px;
+    font-weight: 400;
+    color: #d9e9ff;
+    margin-left: auto;
+}
+
+.selector-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 2rem 0 1.8rem;
+    align-items: center;
+}
+
+select {
+    flex: 2 1 220px;
+    background: rgba(10, 20, 40, 0.7);
+    border: 1px solid #4f6f9f;
+    border-radius: 60px;
+    padding: 0.9rem 1.8rem;
+    font-size: 1.1rem;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23a0c0ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1.2rem center;
+    background-size: 1.4rem;
+}
+
+select option {
+    background: #1e2f47;
+    color: #eee;
+}
+
+#get-weather-btn {
+    flex: 0 1 auto;
+    background: #70a0ff;
+    border-radius: 60px;
+    padding: 0.9rem 2.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0b1a2f;
+    box-shadow: 0 8px 18px rgba(0, 30, 80, 0.5);
+    cursor: pointer;
+    transition: 0.15s;
+    letter-spacing: 0.5px;
+    border: 1px solid #9bbdff;
+}
+
+#get-weather-btn:hover {
+    background: #82adff;
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 40, 100, 0.7);
+}
+
+#get-weather-btn:active {
+    transform: scale(0.98);
+}
+
+.weather-grid {
+    background: rgba(0, 12, 30, 0.5);
+    border-radius: 2rem;
+    padding: 2rem 1.8rem;
+    margin-top: 1.2rem;
+    border: 1px solid #2d4b74;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem 2rem;
+    backdrop-filter: blur(4px);
+}
+
+.icon-block {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #0d213b;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    margin-bottom: 0.2rem;
+}
+
+#weather-icon {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 8px 12px #00000050);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-temp {
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.main-temp strong {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #b4d0ff;
+}
+
+.weather-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px dashed #3a577a;
+    padding-bottom: 0.6rem;
+}
+
+.weather-item .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #9cb9e5;
+}
+
+.weather-item .value {
+    font-size: 1.7rem;
+    font-weight: 260;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.value.na-value {
+    color: #ffb0a0;
+    font-style: italic;
+}
+
+.location-tag {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    background: #172f4b;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4rem;
+    text-align: center;
+    border: 1px solid #47678f;
+}
