@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise · Personal Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="weather-card">
+        <h1>
+            <span class="title-icon">🌤️</span> WeatherWise
+            <span class="badge">lab</span>
+        </h1>
+
+        <div class="selector-area">
+            <select id="city-select">
+                <option value="" disabled selected>— choose a city —</option>
+                <option value="new york">New York</option>
+                <option value="los angeles">Los Angeles</option>
+                <option value="chicago">Chicago</option>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="london">London</option>
+            </select>
+            <button id="get-weather-btn">check weather</button>
+        </div>
+
+        <div class="weather-grid" id="weatherPanel">
+            <div class="icon-block">
+                <img id="weather-icon"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%233f5e8c' opacity='0.3'/%3E%3Ctext x='18' y='68' fill='%23aac3ff' font-size='50'%3E🌥️%3C/text%3E%3C/svg%3E"
+                    alt="weather icon">
+                <div class="main-temp">
+                    <span id="main-temperature">--</span> <strong>°C</strong>
+                </div>
+            </div>
+
+            <div class="weather-item">
+                <span class="label">feels like</span>
+                <span class="value" id="feels-like">--</span>
+            </div>
+            <div class="weather-item">
+                <span class="label">humidity</span>
+                <span class="value" id="humidity">--</span>
+            </div>
+            <div class="weather-item">
+                <span class="label">wind (m/s)</span>
+                <span class="value" id="wind">--</span>
+            </div>
+            <div class="weather-item">
+                <span class="label">wind gust</span>
+                <span class="value" id="wind-gust">--</span>
+            </div>
+            <div class="weather-item">
+                <span class="label">main weather</span>
+                <span class="value" id="weather-main">--</span>
+            </div>
+            <div class="location-tag" id="location">📍 select a city</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
